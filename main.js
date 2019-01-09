@@ -1,3 +1,10 @@
+//Get html file and appent to html
+jQuery(function () {
+	jQuery.get("https://raw.githubusercontent.com/lechivinh1992/keyword-search/master/reasonContentData.html", function (data) {
+		$("#reasonContent").append(data);
+	});
+});
+
 // Loopkup Funtion
 function searching() {
   // Declare variables
@@ -99,10 +106,3 @@ jQuery().ready(function(){
 	
 	
 })
-
-
-jQuery(function () {
-	jQuery.get("https://raw.githubusercontent.com/lechivinh1992/keyword-search/master/reasonContentData.html", function (data) {
-		$("#reasonContent").append(data);
-	});
-});
