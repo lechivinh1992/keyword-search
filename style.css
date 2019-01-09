@@ -1,1 +1,117 @@
 @import "https://raw.githubusercontent.com/lechivinh1992/keyword-search/master/style.less";
+body {
+  background: url('https://images6.alphacoders.com/877/877568.jpg') no-repeat #f9f9fb;
+  background-size: 100%;
+  height: 600px;
+  font-family: Georgia, "Times New Roman", "KaiTi", "楷体", STKaiti, "华文楷体", serif;
+}
+#menu div {
+  float: left;
+  padding: 10px;
+  margin: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #01c2d6;
+  border-top: 5px solid #01c2d6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#menu .active {
+  background: #eee;
+}
+.container {
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  margin: auto;
+  background: white;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 10px #000;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+#reason {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 5px;
+  border: 1px solid #01c2d6;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: -5px;
+  width: 85%;
+}
+#myText {
+  position: relative;
+  padding: 0;
+  height: 500px;
+  overflow-y: scroll;
+  font-weight: bold;
+  font-size: 18px;
+  color: green;
+}
+#myText li {
+  list-style-type: none;
+  border-bottom: 1px solid #cccccc;
+  padding: 15px;
+  text-align: center;
+}
+#myText li:hover {
+  cursor: pointer;
+  background: #cccccc;
+}
+#myText::-webkit-scrollbar {
+  width: 10px;
+}
+#myText::-webkit-scrollbar-thumb {
+  background: #01c2d6;
+  border-radius: 10px;
+}
+#clear {
+  display: inline-block;
+  background: #01c2d6;
+  border: 1px solid #01abbd;
+  padding: 10px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: 10%;
+  color: white;
+}
+#searhBar {
+  padding: 10px;
+}
+.showSuccess:before {
+  content: "SUCS";
+  position: absolute;
+  left: 185;
+  background: #0000005e;
+  color: white;
+  padding: 15px 10px;
+  border: 1px solid #01c2d6;
+  border-radius: 100%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+.showSuccessV2 {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  background: #0000005e;
+  border: 2px solid #01c2d6;
+  color: #01c2d6;
+  text-align: center;
+  font-weight: bold;
+  padding: 60px 60px;
+  border-radius: 50%;
+}
+.show {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+table {
+  width: 100%;
+}
+table tr {
+  border-bottom: 1px solid #cccccc;
+}
