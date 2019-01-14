@@ -1,8 +1,5 @@
-{
-  "firstName":"John", 
-  "lastName":"Doe"
-},
-{
-  "firstName":"John1", 
-  "lastName":"Doe2"
+{"reason":
+  {"firstName":"John", "lastName":"Doe"}, 
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Peter", "lastName":"Jones"}
 }
