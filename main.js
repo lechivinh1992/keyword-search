@@ -1,6 +1,6 @@
 //Get html file and appent to html
 jQuery(function () {
-	jQuery.get("https://raw.githubusercontent.com/lechivinh1992/keyword-search/master/reasonContentData.html", function (data) {
+	jQuery.get("https://cdn.jsdelivr.net/gh/lechivinh1992/keyword-search@bc6c9790971726af0314329bc1c0ba88455f8137/reasonContentData.html", function (data) {
 		$("#reasonContent").append(data);
 	});
 });
