@@ -1,9 +1,9 @@
 //Get html file and appent to html
-jQuery(function () {
+/*jQuery(function () {
 	jQuery.get("https://cdn.jsdelivr.net/gh/lechivinh1992/keyword-search@bc6c9790971726af0314329bc1c0ba88455f8137/reasonContentData.html", function (data) {
 		$("#reasonContent").append(data);
 	});
-});
+});*/
 
 // Loopkup Funtion
 function searching() {
