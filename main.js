@@ -5,14 +5,6 @@
 	});
 });*/
 
-jQuery.getJSON( "https://cdn.jsdelivr.net/gh/lechivinh1992/keyword-search@47b22e0b9d3e2bb895f03c4bd9233fecb8c7a9be/reasons.json", function(jsonData) {
-	jQuery.each(jsonData.reason, function(i, field){
-		jQuery("#mytext").append('<li>' + field + '</li>');
-	  });
-})
-
-setTimeout(5000)
-
 // Loopkup Funtion
 function searching() {
   // Declare variables
