@@ -1,6 +1,6 @@
 {
-"user":
-	{
+"user":[
+{
 		"name":"yuebet@hotmail.com",
 		"password":"yueliang762380"
 	},
@@ -8,4 +8,5 @@
 		"name":"cs@yuebet.ws",
 		"password":"qazxsw123cde"
 	}
+]
 }
