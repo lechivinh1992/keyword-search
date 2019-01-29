@@ -33,37 +33,39 @@ jQuery().ready(function(){
 })
 
 // Copy Function
+function copyText(text) {
+	// CREAT A RANGE TO Copy
+	var range = document.createRange();
+	
+	// SLECT TEXT
+	range.selectNodeContents(text);
+	var sel = window.getSelection();
+	sel.removeAllRanges();
+	sel.addRange(range);		
+	var successful = document.execCommand('copy');
+	sel.removeAllRanges();
+	var resultBoxPosition = jQuery(text).position();
+	//alert(jQuery(text).position().left)
+	if(successful){		
+		jQuery('.container').append('<div class="showSuccessV2">复制成功</div>');
+		setTimeout(function() {jQuery('.showSuccessV2').addClass('show');}, 100);
+		setTimeout(function() {jQuery('.showSuccessV2').remove();}, 1000);
+	}
+	else{alert("cannot Copy your text");}
+}
 jQuery().ready(function() {
 	jQuery('#myText li').click(function() {
 	//GET INDEX FORM ID AND TAG NAME
 		var index = $(this).index();
 		var text = jQuery('#myText li')[index];
-		
-		// CREAT A RANGE TO Copy
-		var range = document.createRange();
-		
-		// SLECT TEXT
-		range.selectNodeContents(text);
-		var sel = window.getSelection();
-		sel.removeAllRanges();
-		sel.addRange(range);		
-		var successful = document.execCommand('copy');
-		sel.removeAllRanges();
-		var resultBoxPosition = jQuery(text).position();
-		//alert(jQuery(text).position().left)
-		if(successful){
-			//var resultBox = jQuery('#myText li')[index];
-			//jQuery(resultBox).addClass('showSuccess');
-			//setTimeout(function() {jQuery(resultBox).removeClass("showSuccess");}, 1000);
-			//jQuery(resultBox).delay(3000).hide(0);
-			
-			jQuery('.container').append('<div class="showSuccessV2">复制成功</div>');
-			setTimeout(function() {jQuery('.showSuccessV2').addClass('show');}, 100);
-			setTimeout(function() {jQuery('.showSuccessV2').remove();}, 1000);
-		}
-		else{alert("cannot Copy your text");}
+		copyText(text);
 	})
-	
+	jQuery('#emailReply .field').click(function() {
+	//GET INDEX FORM ID AND TAG NAME
+		var index = $(this).index();
+		var text = jQuery('#emailReply .field')[index];
+		copyText(text);
+	})
 }); 	
 
 //Change the 
