@@ -1,10 +1,3 @@
-//Get html file and appent to html
-/*jQuery(function () {
-	jQuery.get("https://cdn.jsdelivr.net/gh/lechivinh1992/keyword-search@bc6c9790971726af0314329bc1c0ba88455f8137/reasonContentData.html", function (data) {
-		$("#reasonContent").append(data);
-	});
-});*/
-
 // Loopkup Funtion
 function searching() {
   // Declare variables
@@ -74,35 +67,32 @@ jQuery().ready(function() {
 }); 	
 
 //Change the 
+function setActions(){
+	jQuery('.active').removeClass('active')
+	jQuery(this).addClass('active')
+	jQuery('.content').hide()
+}
 jQuery().ready(function(){
 	var contentCount = document.getElementsByClassName('content').length
 	jQuery('#reasonMenu').click(function(){
 		//if(document.getElementById('reasonMenu').getAttribute('class').includes('active') === false ){alert("Exis")}
-		jQuery('.active').removeClass('active')
-		jQuery(this).addClass('active')
-		for(i = 0; i < contentCount; i++) {
-			document.getElementsByClassName('content')[i].style.display = "none"
-		}
-		document.getElementById('reasonSearch').style.display = ""
+		setActions();
+		jQuery('#reasonSearch').show()
 	})
 	
 	jQuery('#userMenu').click(function(){
-		jQuery('.active').removeClass('active')
-		jQuery(this).addClass('active')
-		for(i = 0; i < contentCount; i++) {
-			document.getElementsByClassName('content')[i].style.display = "none"
-		}
-		document.getElementById('usersSearch').style.display = ""
+		setActions();
+		jQuery('#usersSearch').show()
 	})
 	
 	jQuery('#bookmarksMenu').click(function(){
-		jQuery('.active').removeClass('active')
-		jQuery(this).addClass('active')
-		for(i = 0; i < contentCount; i++) {
-			document.getElementsByClassName('content')[i].style.display = "none"
-		}
-		document.getElementById('bookMarks').style.display = ""
+		setActions();
+		jQuery('#bookMarks').show()
 	})
 	
+	jQuery('#emailReplyLoad').click(function(){
+		setActions();
+		jQuery('#emailReply').show()
+	})
 	
 })
