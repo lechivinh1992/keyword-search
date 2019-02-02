@@ -53,7 +53,7 @@ function copyText(text) {
 	}
 	else{alert("cannot Copy your text");}
 }
-jQuery().ready(function() {
+jQuery(document).ready(function() {
 	jQuery('#myText li').click(function() {
 	//GET INDEX FORM ID AND TAG NAME
 		var index = $(this).index();
@@ -74,27 +74,7 @@ function setActions(){
 	jQuery(this).addClass('active')
 	jQuery('.content').hide()
 }
-jQuery().ready(function(){
-	var contentCount = document.getElementsByClassName('content').length
-	jQuery('#reasonMenu').click(function(){
-		//if(document.getElementById('reasonMenu').getAttribute('class').includes('active') === false ){alert("Exis")}
-		setActions();
-		jQuery('#reasonSearch').show()
-	})
-	
-	jQuery('#userMenu').click(function(){
-		setActions();
-		jQuery('#usersSearch').show()
-	})
-	
-	jQuery('#bookmarksMenu').click(function(){
-		setActions();
-		jQuery('#bookMarks').show()
-	})
-	
-	jQuery('#emailReplyLoad').click(function(){
-		setActions();
-		jQuery('#emailReply').show()
-	})
-	
-})
+function setShowActions(id){
+	setActions();
+	jQuery('#'+id+'').show();
+}
