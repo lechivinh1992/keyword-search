@@ -52,21 +52,7 @@ function copyText(text) {
 		setTimeout(function() {jQuery('.showSuccessV2').remove();}, 1000);
 	}
 	else{alert("cannot Copy your text");}
-}
-jQuery(document).ready(function() {
-	jQuery('#myText li').click(function() {
-	//GET INDEX FORM ID AND TAG NAME
-		var index = $(this).index();
-		var text = jQuery('#myText li')[index];
-		copyText(text);
-	})
-	jQuery('#emailReply .field').click(function() {
-	//GET INDEX FORM ID AND TAG NAME
-		var index = $(this).index();
-		var text = jQuery('#emailReply .field')[index];
-		copyText(text);
-	})
-}); 	
+}	
 
 //Change the 
 function setActions(){
