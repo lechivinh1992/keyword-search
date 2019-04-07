@@ -1,5 +1,5 @@
 // Loopkup Funtion
-function searchingTest(reason, myText) {
+function searching(reason, myText) {
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById(reason);
