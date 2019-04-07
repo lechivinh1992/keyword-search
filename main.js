@@ -1,10 +1,10 @@
 // Loopkup Funtion
-function searching() {
+function searchingTest(reason, myText) {
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('reason');
+  input = document.getElementById(reason);
   filter = input.value.toUpperCase();
-  ul = document.getElementById("myText");
+  ul = document.getElementById(myText);
   li = ul.getElementsByTagName('li');
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
