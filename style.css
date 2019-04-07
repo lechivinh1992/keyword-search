@@ -29,7 +29,7 @@ body {
   right: 0;
   top: 0;
 }
-#reason {
+.content input[type="text"] {
   display: inline-block;
   border-radius: 4px;
   padding: 10px 5px;
@@ -39,7 +39,7 @@ body {
   margin-right: -5px;
   width: 85%;
 }
-#myText {
+.content ul {
   position: relative;
   padding: 0;
   height: 500px;
@@ -48,20 +48,20 @@ body {
   font-size: 18px;
   color: green;
 }
-#myText li {
+.content ul li {
   list-style-type: none;
   border-bottom: 1px solid #cccccc;
   padding: 15px;
   text-align: center;
 }
-#myText li:hover {
+.content ul li:hover {
   cursor: pointer;
   background: #cccccc;
 }
-#myText::-webkit-scrollbar {
+.content ul::-webkit-scrollbar {
   width: 10px;
 }
-#myText::-webkit-scrollbar-thumb {
+.content ul::-webkit-scrollbar-thumb {
   background: #01c2d6;
   border-radius: 10px;
 }
@@ -75,7 +75,7 @@ body {
   width: 10%;
   color: white;
 }
-#searhBar {
+.searhBar {
   padding: 10px;
 }
 .showSuccess:before {
