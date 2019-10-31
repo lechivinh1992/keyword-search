@@ -15,7 +15,7 @@ body {
 	 border-bottom-left-radius: 5px;
 	 border-bottom-right-radius: 5px;
 }
- #menu:active {
+ #menu div:focus {
 	 color: #e6056f;
 }
  .container {
@@ -125,3 +125,4 @@ body {
 	 color: #e6056f;
 	 padding: 5px 10px;
 }
+ 
