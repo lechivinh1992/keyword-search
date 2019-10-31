@@ -15,7 +15,7 @@ body {
 	 border-bottom-left-radius: 5px;
 	 border-bottom-right-radius: 5px;
 }
- #menu div:focus {
+ #menu div:active {
 	 color: #e6056f;
 }
  .container {
