@@ -34,10 +34,8 @@ body {
 	 border-radius: 4px;
 	 padding: 10px 5px;
 	 border: 1px solid #240190;
-	 border-top-right-radius: 0;
-	 border-bottom-right-radius: 0;
 	 margin-right: -5px;
-	 width: 85%;
+	 width: 100%;
 }
  .content input[type="text"] {
 	 border-color: #240190;
@@ -47,7 +45,7 @@ body {
 	 border: 1px solid #01c2d6;
 	 width: 100%;
 }
- #myText {
+ .content ul {
 	 position: relative;
 	 padding: 0;
 	 height: 500px;
@@ -56,22 +54,22 @@ body {
 	 font-size: 18px;
 	 color: green;
 }
- #myText li {
+ .content ul li {
 	 list-style-type: none;
 	 border-bottom: 1px solid #ccc;
 	 padding: 15px;
-	 text-align: center;
+	 text-align: left;
 	 color: #240190;
 }
- #myText li:hover {
+ .content ul li:hover {
 	 cursor: pointer;
 	 background: #b40457;
 	 color: wheat;
 }
- #myText::-webkit-scrollbar {
+ .content ul::-webkit-scrollbar {
 	 width: 10px;
 }
- #myText::-webkit-scrollbar-thumb {
+ .content ul::-webkit-scrollbar-thumb {
 	 background: #240190;
 	 border-radius: 10px;
 }
@@ -121,7 +119,8 @@ body {
  table {
 	 width: 100%;
 }
- table tr {
+ table tr td {
 	 border-bottom: 1px solid #ccc;
+	 font-weight: bold;
+	 color: #e6056f;
 }
- 
