@@ -1,4 +1,5 @@
-@basicColor: #01c2d6;
+@basicColor: #240190;
+@basicActiveColor: #e6056f;
 @gray: #ccc;
 
 body {
@@ -9,26 +10,28 @@ font-family: Georgia, "Times New Roman", "KaiTi", "楷体", STKaiti, "华文楷�
 }
 #menu {
   div {
-    float: left; 
+    text-align: center;
+    display: inline-block;
     padding: 10px; 
-    margin: 5px 10px;
+    margin: 0px 5px;
     cursor: pointer; 
-    border: 1px solid @basicColor; 
-    border-top: 5px solid @basicColor; 
+    font-weight: bold;
+    //border: 1px solid @basicColor; 
+    border-bottom: 5px solid @basicColor; 
     border-bottom-left-radius: 5px; 
     border-bottom-right-radius: 5px;
   }
-  .active {background: #eee;}
+  &:active {color: @basicActiveColor;}
 }
 .container{
-  width: 80%; 
-  height: 80%;
+  width: 60%; 
+  height: 600px;
   overflow: hidden; 
   margin: auto; 
   background: white; 
   border: 1px solid @gray; 
   box-shadow: 1px 1px 10px #000;
-  position: fixed;
+  //position: fixed;
   right: 0;
   top: 0;
 }
@@ -37,29 +40,41 @@ font-family: Georgia, "Times New Roman", "KaiTi", "楷体", STKaiti, "华文楷�
   border-radius: 4px;
   padding: 10px 5px;
   border: 1px solid @basicColor;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  //border-top-right-radius: 0;
+  //border-bottom-right-radius: 0;
   margin-right: -5px;
-  width: 85%;
+  width: 100%;
 }
-#myText {
-  position: relative;
-  padding: 0; 
-  height: 500px; 
-  overflow-y: scroll; 
-  font-weight: bold; 
-  font-size: 18px; 
-  color: green;
-  li {
-    list-style-type: none;
-    border-bottom: 1px solid @gray;
-    padding: 15px;
-    text-align: center;
-    &:hover {cursor: pointer; background: @gray;}
-  }
-  &::-webkit-scrollbar {width: 10px;}
-  &::-webkit-scrollbar-thumb { background: @basicColor; border-radius: 10px;}
+.content {
+    input[type="text"]{
+        border-color: @basicColor;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 10px 5px;
+        border: 1px solid #01c2d6;
+        width: 100%;
+    }
+    ul {
+      position: relative;
+      padding: 0; 
+      height: 500px; 
+      overflow-y: scroll; 
+      font-weight: bold; 
+      font-size: 18px; 
+      color: green;
+      li {
+        list-style-type: none;
+        border-bottom: 1px solid @gray;
+        padding: 15px;
+        text-align: left;
+        color: @basicColor;
+        &:hover {cursor: pointer; background: darken(@basicActiveColor, 10%); color: wheat;}
+      }
+      &::-webkit-scrollbar {width: 10px;}
+      &::-webkit-scrollbar-thumb {background: @basicColor; border-radius: 10px;}
+    }
 }
+
 #clear{
   display: inline-block;
   background: @basicColor;
@@ -95,9 +110,13 @@ font-family: Georgia, "Times New Roman", "KaiTi", "楷体", STKaiti, "华文楷�
   border-radius: 50%;}
 .show {transition: opacity 0.5s ease-in-out; opacity: 1;}
 table {
-  width: 100%;
-  tr {border-bottom: 1px solid #ccc}
+  width: 40%;
+  tr {
+      td {
+          border-bottom: 1px solid #ccc;
+          font-weight: bold;
+          color: @basicActiveColor;
+          padding: 5px 10px;
+      }
+  }
 }
-
-
-
